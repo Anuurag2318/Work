@@ -49,13 +49,9 @@ playBtn.addEventListener("click", () => {
 const quotes = [
   "💖 You’re not just my love, you’re my reason to smile every day!",
   "🎂 Happy Birthday to the queen of my heart — today’s all about you!",
-  "🌟 With every candle you blow, my love for you grows even brighter.",
   "🎁 You’re the best gift life has ever given me.",
   "🌹 You make the world more beautiful just by being in it.",
-  "💕 I’m the luckiest person to call you mine — today, tomorrow, forever.",
   "💫 You shine brighter than any birthday sparkler!",
-  "🎈 I didn’t need a wish — you’re my wish come true.",
-  "💋 One more year of loving you — and I still fall harder every day.",
   "👑 Happy Birthday, my princess. Let’s make today unforgettable!"
 ];
 const quoteBox = document.getElementById("quoteBox");
