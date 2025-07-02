@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <audio id="birthdayAudio" loop muted>
+    <source src="happy-birthday.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="background"></div>
+  <canvas id="confetti"></canvas>
+  <div class="balloon-container"></div>
+
+  <div class="container">
+    <h1>🎉 Happy Birthday <span class="name">Rajeshwari</span>! 🎉</h1>
+
+    <div class="cake-round sparkle">
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+      <div class="cake-text">Riya</div>
+    </div>
+    <br>
+    <br>
+    
+    <div class="message">
+      <p>Wishing you all the joy, happiness, and cake in the world! 🎂❤️</p>
+    </div>
+
+    <div class="popup-quote" id="quoteBox">🎁 You are a gift to everyone around you! 🎈</div>
+    <br>
+    <br>
+    <button id="playMusicBtn">🎵 Play Birthday Music</button>
+
+    <div class="slideshow">
+      <img src="images/photo1.jpg" id="slide" alt="Birthday Memory"/>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

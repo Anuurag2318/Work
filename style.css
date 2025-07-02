@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background animation */
+.background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top right, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: bgGradient 10s ease infinite;
+  z-index: -2;
+}
+
+@keyframes bgGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Confetti Layer */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Content Container */
+.container {
+  text-align: center;
+  padding: 60px 20px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+
+.name {
+  color: #0400ff;
+    text-shadow: 2px 2px #ff00bf;
+}
+
+/* Cake Styling */
+.cake-round {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle at center, #ff99cc 0%, #ff3366 100%);
+  border-radius: 50%;
+  top:47px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 30px #fff;
+}
+
+.cake-text {
+  position: absolute;
+  top: 50%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Candle & Flame */
+.candle {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 60px;
+  background: white;
+  border-radius: 5px;
+}
+
+.flame {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  background: orange;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: flicker 0.4s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.9; }
+  50% { transform: translateX(-50%) scale(1.2); opacity: 1; }
+}
+
+/* Message & Slideshow */
+.message {
+  margin-top: 30px;
+  font-size: 1.5em;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #222;
+}
+
+.slideshow {
+  margin-top: 30px;
+}
+
+.slideshow img {
+  max-width: 80vw;
+  max-height: 70vh;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #fff;
+  animation: fade 1s ease-in-out;
+  object-fit: contain;
+}
+
+@keyframes fade {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
+
+
+
+/* 🎈 Balloons */
+.balloon {
+  position: fixed;
+  bottom: -100px;
+  width: 40px;
+  height: 60px;
+  background: red;
+  border-radius: 50% 50% 50% 50%;
+  animation: rise 10s linear infinite;
+  z-index: 0;
+  opacity: 0.8;
+}
+@keyframes rise {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ✨ Sparkles */
+.sparkle::after {
+  content: "✨";
+  font-size: 1.5rem;
+  position: absolute;
+  animation: sparkle 1s infinite ease-in-out alternate;
+  left: 100%;
+  top: -20px;
+}
+@keyframes sparkle {
+  0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+  100% { transform: scale(1.5) rotate(360deg); opacity: 0.2; }
+}
+
+/* 💬 Pop-up Quotes */
+.popup-quote {
+  font-size: 1.4rem;
+  color: #ffffff;
+  background: #ff66aa;
+  padding: 12px 24px;
+  margin-top: 30px;
+  display: inline-block;
+  border-radius: 20px;
+  animation: popupAnim 1.5s infinite alternate;
+}
+
+@keyframes popupAnim {
+  from { transform: scale(1); opacity: 0.9; }
+  to { transform: scale(1.1); opacity: 1; }
+}
+
+
+
+#playMusicBtn {
+  background: linear-gradient(135deg, #ff6f91, #ff9671);
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Comic Sans MS', cursive;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(255, 118, 118, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  animation: pulse 2s infinite;
+}
+
+#playMusicBtn:hover {
+  background: linear-gradient(135deg, #ff3e6c, #ff8c42);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6);
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
